@@ -4,7 +4,7 @@ metadata:
   name: bernardoalmeida-playlist-recommender-deployment
   namespace: bernardoalmeida
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: bernardoalmeida-playlist-recommender
@@ -18,23 +18,11 @@ spec:
         persistentVolumeClaim:
           claimName: bernardoalmeida-playlist-recommender-pvc
       containers:
-      - name: bernardoalmeida-playlist-recommender-model
-        image: docker.io/bereis01/playlist-recommender-model:latest
-        env:
-        - name: DATA_PATH
-          value: "/usr/data/"
-        - name: DATABASE_PATH
-          value: "/usr/data/2023_spotify_ds1.csv"
-        volumeMounts:
-        - mountPath: "/usr/data"
-          name: bernardoalmeida-playlist-recommender-storage
       - name: bernardoalmeida-playlist-recommender-backend
         image: docker.io/bereis01/playlist-recommender-backend:latest
         env:
-        - name: DATA_PATH
-          value: "/usr/data/"
-        - name: DATABASE_PATH
-          value: "/usr/data/2023_spotify_ds1.csv"
+        - name: MODEL_PATH
+          value: "/usr/data/test.pkl"
         volumeMounts:
         - mountPath: "/usr/data"
           name: bernardoalmeida-playlist-recommender-storage
