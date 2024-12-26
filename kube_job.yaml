@@ -6,6 +6,10 @@ metadata:
 spec:
   template:
     spec:
+      volumes:
+      - name: bernardoalmeida-playlist-recommender-storage
+        persistentVolumeClaim:
+          claimName: bernardoalmeida-playlist-recommender-pvc
       containers:
       - name: bernardoalmeida-playlist-recommender-model
         image: docker.io/bereis01/playlist-recommender-model:latest
