@@ -19,7 +19,7 @@ spec:
           claimName: bernardoalmeida-playlist-recommender-pvc
       containers:
       - name: bernardoalmeida-playlist-recommender-backend
-        image: docker.io/bereis01/playlist-recommender-backend
+        image: docker.io/bereis01/playlist-recommender-backend:0.2.0
         envFrom:
         - configMapRef:
             name: bernardoalmeida-playlist-recommender-configmap
