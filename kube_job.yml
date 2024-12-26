@@ -1,0 +1,23 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: bernardoalmeida-playlist-recommender-job
+  namespace: bernardoalmeida
+spec:
+  template:
+    spec:
+      volumes:
+      - name: bernardoalmeida-playlist-recommender-storage
+        persistentVolumeClaim:
+          claimName: bernardoalmeida-playlist-recommender-pvc
+      containers:
+      - name: bernardoalmeida-playlist-recommender-model
+        image: docker.io/bereis01/playlist-recommender-model:latest
+        envFrom:
+        - configMapRef:
+            name: bernardoalmeida-playlist-recommender-configmap
+        volumeMounts:
+        - mountPath: "/usr/data"
+          name: bernardoalmeida-playlist-recommender-storage
+      restartPolicy: Never
+  backoffLimit: 4
