@@ -23,6 +23,8 @@ spec:
         env:
         - name: MODEL_PATH
           value: "/usr/data/test.pkl"
+        - name: FORCE
+          value: "WAAAAAAAAAAA"
         volumeMounts:
         - mountPath: "/usr/data"
           name: bernardoalmeida-playlist-recommender-storage
