@@ -22,4 +22,4 @@ spec:
         - mountPath: "/usr/data"
           name: bernardoalmeida-playlist-recommender-storage
       restartPolicy: Never
-#  backoffLimit: 4
+  backoffLimit: 4
