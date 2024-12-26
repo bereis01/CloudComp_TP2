@@ -20,11 +20,17 @@ spec:
       containers:
       - name: bernardoalmeida-playlist-recommender-model
         image: docker.io/bereis01/playlist-recommender-model:latest
+        env:
+        - name: DATA_PATH
+          value: "/usr/data/"
         volumeMounts:
         - mountPath: "/usr/data"
           name: bernardoalmeida-playlist-recommender-storage
       - name: bernardoalmeida-playlist-recommender-backend
         image: docker.io/bereis01/playlist-recommender-backend:latest
+        env:
+        - name: DATA_PATH
+          value: "/usr/data/"
         volumeMounts:
         - mountPath: "/usr/data"
           name: bernardoalmeida-playlist-recommender-storage
