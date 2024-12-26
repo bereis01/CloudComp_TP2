@@ -1,4 +1,3 @@
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -34,6 +33,8 @@ spec:
         env:
         - name: DATA_PATH
           value: "/usr/data/"
+        - name: DATABASE_PATH
+          value: "/usr/data/2023_spotify_ds1.csv"
         volumeMounts:
         - mountPath: "/usr/data"
           name: bernardoalmeida-playlist-recommender-storage
