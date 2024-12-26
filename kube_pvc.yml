@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: bernardoalmeida-playlist-recommender-pvc
+  namespace: bernardoalmeida
+spec:
+  storageClassName: default-storage-class-bernardoalmeida
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 1Gi
+  selector:
+    matchLabels:
+      namespace: bernardoalmeida
