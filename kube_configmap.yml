@@ -4,5 +4,5 @@ metadata:
   name: bernardoalmeida-playlist-recommender-configmap
   namespace: bernardoalmeida
 data:
-  MODEL_PATH: "/usr/data/test.pkl"
+  MODEL_PATH: "/usr/data/model.pkl"
   DATABASE_PATH: "/usr/data/2023_spotify_ds1.csv"
