@@ -4,7 +4,7 @@ metadata:
   name: bernardoalmeida-playlist-recommender-deployment
   namespace: bernardoalmeida
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: bernardoalmeida-playlist-recommender
