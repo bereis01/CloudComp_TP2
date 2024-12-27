@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: bernardoalmeida-playlist-recommender-job-b
+  name: bernardoalmeida-playlist-recommender-job-a
   namespace: bernardoalmeida
 spec:
   template:
@@ -19,3 +19,5 @@ spec:
         volumeMounts:
         - mountPath: "/usr/data"
           name: bernardoalmeida-playlist-recommender-storage
+      restartPolicy: Never
+  backoffLimit: 4
