@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: bernardoalmeida-playlist-recommender-job-0-0-2
+  name: bernardoalmeida-playlist-recommender-job-0-0-3
   namespace: bernardoalmeida
 spec:
   template:
