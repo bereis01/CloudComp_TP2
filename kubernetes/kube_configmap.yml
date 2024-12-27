@@ -5,4 +5,4 @@ metadata:
   namespace: bernardoalmeida
 data:
   MODEL_PATH: "/usr/data/model.pkl"
-  DATABASE_PATH: "https://raw.githubusercontent.com/bereis01/CloudComp_TP2/refs/heads/main/data/2023_spotify_ds1.csv"
+  DATABASE_PATH: "https://raw.githubusercontent.com/bereis01/CloudComp_TP2/refs/heads/main/data/2023_spotify_ds2.csv"
