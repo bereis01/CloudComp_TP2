@@ -1,9 +1,10 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: bernardoalmeida-playlist-recommender-job-a
+  name: bernardoalmeida-playlist-recommender-job-b
   namespace: bernardoalmeida
 spec:
+  ttlSecondsAfterFinished: 0
   template:
     spec:
       volumes:
