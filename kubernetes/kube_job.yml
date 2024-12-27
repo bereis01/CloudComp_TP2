@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: bernardoalmeida-playlist-recommender-job-b
+  name: bernardoalmeida-playlist-recommender-job-a
   namespace: bernardoalmeida
   annotations:
     argocd.argoproj.io/hook: PostSync
@@ -15,7 +15,7 @@ spec:
           claimName: bernardoalmeida-playlist-recommender-pvc
       containers:
       - name: bernardoalmeida-playlist-recommender-model
-        image: docker.io/bereis01/playlist-recommender-model:0.2.0
+        image: docker.io/bereis01/playlist-recommender-model:0.2.1
         envFrom:
         - configMapRef:
             name: bernardoalmeida-playlist-recommender-configmap
