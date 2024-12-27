@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: bernardoalmeida-playlist-recommender-job
+  name: bernardoalmeida-playlist-recommender-job-0-0-1
   namespace: bernardoalmeida
 spec:
   template:
@@ -21,3 +21,7 @@ spec:
           name: bernardoalmeida-playlist-recommender-storage
       restartPolicy: Never
   backoffLimit: 4
+  syncPolicy:
+    automated:
+      prune: true
+      allowEmpty: true

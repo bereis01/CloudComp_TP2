@@ -10,3 +10,7 @@ spec:
     - protocol: TCP
       port: 52006
       targetPort: 8000
+  syncPolicy:
+    automated:
+      prune: true
+      allowEmpty: true
