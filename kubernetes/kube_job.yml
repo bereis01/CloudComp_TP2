@@ -3,9 +3,6 @@ kind: Job
 metadata:
   name: bernardoalmeida-playlist-recommender-job-a
   namespace: bernardoalmeida
-  annotations:
-    argocd.argoproj.io/hook: PostSync
-    argocd.argoproj.io/hook-delete-policy: HookSucceeded
 spec:
   template:
     spec:
