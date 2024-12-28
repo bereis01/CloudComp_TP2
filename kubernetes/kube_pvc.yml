@@ -13,7 +13,3 @@ spec:
   selector:
     matchLabels:
       namespace: bernardoalmeida
-  syncPolicy:
-    automated:
-      prune: true
-      allowEmpty: true

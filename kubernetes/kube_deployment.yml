@@ -26,7 +26,3 @@ spec:
         volumeMounts:
         - mountPath: "/usr/data"
           name: bernardoalmeida-playlist-recommender-storage
-  syncPolicy:
-    automated:
-      prune: true
-      allowEmpty: true
